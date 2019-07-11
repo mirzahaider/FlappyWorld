@@ -20,9 +20,9 @@ public class Bird implements Runnable {
 
     private float mInitialXpos;
     private float mInitialYpos;
-    private float mVelocity = (float) 0.4;//0.024;                    // pixels per millis
-    private float mGravity = (float) 0.0216;//0.36;                   // pixels per millis
-    private float mJump = (float) ((0.858/100.00 * mFrameHeight));    // expressed as a percentage of mFrameHeight
+    private float mVelocity = (float) 0.00034 * mFrameHeight;//0.4;         // pixels per millis - relative to mFrameHeight
+    private float mGravity = (float) (0.000304054 * mFrameHeight * 0.06);   // pixels per millis - relative to mFrameHeight
+    private float mJump = (float) ((0.858/100.00 * mFrameHeight));          // expressed as a percentage of mFrameHeight
 
     private final int FLAP_TIME = 160;      // milliseconds between a flap
     private Thread mThread;
